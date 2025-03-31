@@ -1,1 +1,40 @@
-内核CVE利用复现，分析
+## 内核CVE利用复现、分析
+
+- CVE-2024-41009 bpf ringbuf Buffer overlapping 5.8 - 6.9  done
+- CVE-2024-1085  netfilter UAF
+- CVE-2024-0193  netfilter UAF
+
+- CVE-2023-6932 2.6.12 ~ 6.7 ipv4/igmp uaf    using timer -- didnot
+```
+-       if (!mod_timer(&im->timer, jiffies+tv+2))
+-               refcount_inc(&im->refcnt);
++       if (refcount_inc_not_zero(&im->refcnt)) {
++               if (mod_timer(&im->timer, jiffies + tv + 2))
++                       ip_ma_put(im);
++       }
+```
+
+- CVE-2023-6817 netfilter
+- CVE-2023-6111 netfilter 
+- CVE-2023-5345 SMBFS      Double-free
+- CVE-2023-52620 netfilter UAF
+- CVE-2023-52447 BPF       UAF
+- CVE-2023-5197  netfilter UAF
+- CVE-2023-4623 tc         UAF    2.6.3 ~ 6.5  prefetch works
+- CVE-2023-4622 AF_UNIX    UAF    4.2 ~ 6.4
+- CVE-2023-4569 netfilter UAF
+- CVE-2023-4244 netfilter UAF
+- CVE-2023-4208 net/sched UAF
+- CVE-2023-4207 net/sched UAF
+- CVE-2023-4147 netfilter UAF
+- CVE-2023-4015 netfilter UAF
+- CVE-2023-4004 netfilter UAF
+- CVE-2023-3777 netfilter UAF
+- CVE-2023-3776 netfilter UAF
+- CVE-2023-3611 net/sched OOB  3.0+ ~ 6.x
+- CVE-2023-3609 net/sched UAF
+- CVE-2023-3390 netfilter UAF
+- CVE-2023-32233 netfiler UAF
+- CVE-2023-31436 net/sched OOB similar to 2023-3611
+- CVE-2023-0461 net/tls    UAF
+
