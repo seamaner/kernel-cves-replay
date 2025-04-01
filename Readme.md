@@ -1,6 +1,11 @@
-## 内核CVE利用复现、分析
+Kernel Privilege Escalation CVE Analysis and Related Files - the bzImage kernel file and the expoit. You can use this files and Qemu to setup a debug environment and test the exploit.  
 
+*Done*  
 - CVE-2024-41009 bpf ringbuf Buffer overlapping 5.8 - 6.9  done
+
+
+*TODO*  
+
 - CVE-2024-1085  netfilter UAF
 - CVE-2024-0193  netfilter UAF
 
