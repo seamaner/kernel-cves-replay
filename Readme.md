@@ -27,7 +27,7 @@ Kernel Privilege Escalation CVE Analysis and Related Files - the bzImage kernel 
 - CVE-2023-6111 netfilter 
 - CVE-2023-5345 SMBFS      Double-free
 - CVE-2023-52620 netfilter UAF
-- CVE-2023-52447 BPF       UAF
+- CVE-2023-52447 BPF       UAF    v5.8 - v6.6
 - CVE-2023-5197  netfilter UAF
 - CVE-2023-4622 AF_UNIX    UAF    4.2 ~ 6.4
 - CVE-2023-4569 netfilter UAF
@@ -39,10 +39,13 @@ Kernel Privilege Escalation CVE Analysis and Related Files - the bzImage kernel 
 - CVE-2023-4004 netfilter UAF
 - CVE-2023-3777 netfilter UAF
 - CVE-2023-3776 netfilter UAF
-- CVE-2023-3611 net/sched OOB  3.0+ ~ 6.x
+- CVE-2023-3611 net/sched OOB  3.0+ ~ 6.3+
 - CVE-2023-3609 net/sched UAF
 - CVE-2023-3390 netfilter UAF
 - CVE-2023-32233 netfiler UAF
 - CVE-2023-31436 net/sched OOB similar to 2023-3611
 - CVE-2023-0461 net/tls    UAF
+
+[msg_msg](https://n132.github.io/2024/02/09/IPS.html)
+[https://google.github.io/security-research/pocs/linux/cve-2021-22555/writeup.html](https://google.github.io/security-research/pocs/linux/cve-2021-22555/writeup.html)
 
