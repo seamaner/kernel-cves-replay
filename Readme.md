@@ -1,12 +1,14 @@
 Kernel Privilege Escalation CVE Analysis and Related Files - the bzImage kernel file and the expoit. Based on these files and Qemu, it's easy to setup a debug environment and test the exploit.  
 
 **Done**   
+  
 - CVE-2024-41009 bpf ringbuf Buffer overlapping           5.8 - 6.9   done
   buf-overlapping -> buf metadata -> ringbuf meta -> function pointer -> stack pivot -> ROP
   
 - CVE-2023-4623  tc-hfsc     UAF    write-what-where(u64) 2.6.3 ~ 6.5 done 
   write-what-where -> modprobe_path (/sbin/modprobe -> /tmp/zzzdprobe) -> invalid elf trigger 
 
+- CVE-2023-4622 AF_UNIX    UAF    4.2 ~ 6.4                           done
 
 **TODO**  
 
@@ -29,7 +31,6 @@ Kernel Privilege Escalation CVE Analysis and Related Files - the bzImage kernel 
 - CVE-2023-52620 netfilter UAF
 - CVE-2023-52447 BPF       UAF    v5.8 - v6.6
 - CVE-2023-5197  netfilter UAF
-- CVE-2023-4622 AF_UNIX    UAF    4.2 ~ 6.4
 - CVE-2023-4569 netfilter UAF
 - CVE-2023-4244 netfilter UAF
 - CVE-2023-4208 net/sched UAF
