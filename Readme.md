@@ -10,6 +10,8 @@ Kernel Privilege Escalation CVE Analysis and Related Files - the bzImage kernel 
 
 - CVE-2023-4622 AF_UNIX    UAF    4.2 ~ 6.4                           done
 
+- CVE-2021-22555 
+
 **TODO**  
 
 - CVE-2024-1085  netfilter UAF
