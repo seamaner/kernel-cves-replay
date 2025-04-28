@@ -2,15 +2,15 @@ Kernel Privilege Escalation CVE Analysis and Related Files - the bzImage kernel 
 
 **Done**   
   
-- CVE-2024-41009 bpf ringbuf Buffer overlapping           5.8 - 6.9   done
-  buf-overlapping -> buf metadata -> ringbuf meta -> function pointer -> stack pivot -> ROP
+- CVE-2024-41009  bpf ringbuf         5.8 - 6.9     
+  buf-overlapping -> buf metadata -> ringbuf meta -> function pointer -> stack pivot -> ROP  
   
-- CVE-2023-4623  tc-hfsc     UAF    write-what-where(u64) 2.6.3 ~ 6.5 done 
-  write-what-where -> modprobe_path (/sbin/modprobe -> /tmp/zzzdprobe) -> invalid elf trigger 
+- CVE-2023-4623   tc-hfsc     UAF     2.6.3 ~ 6.5    
+  write-what-where(u64)  -> modprobe_path (/sbin/modprobe -> /tmp/zzzdprobe) -> invalid elf trigger   
 
-- CVE-2023-4622 AF_UNIX    UAF    4.2 ~ 6.4                           done
+- CVE-2023-4622   AF_UNIX     UAF     4.2 ~ 6.4  
 
-- CVE-2021-22555 
+- CVE-2021-22555  netfilter   UAF     2.6 ~ 5.12            
 
 **TODO**  
 
