@@ -49,6 +49,6 @@ Kernel Privilege Escalation CVE Analysis and Related Files - the bzImage kernel 
 - CVE-2023-31436 net/sched OOB similar to 2023-3611
 - CVE-2023-0461 net/tls    UAF
 
-[msg_msg](https://n132.github.io/2024/02/09/IPS.html)
-[https://google.github.io/security-research/pocs/linux/cve-2021-22555/writeup.html](https://google.github.io/security-research/pocs/linux/cve-2021-22555/writeup.html)
+[msg_msg](https://n132.github.io/2024/02/09/IPS.html)  
+[https://google.github.io/security-research/pocs/linux/cve-2021-22555/writeup.html](https://google.github.io/security-research/pocs/linux/cve-2021-22555/writeup.html)  
 
