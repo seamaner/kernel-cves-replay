@@ -67,4 +67,5 @@ Kernel Privilege Escalation CVE Analysis and Related Files - the bzImage kernel 
 ## 参考资料         
 [msg_msg](https://n132.github.io/2024/02/09/IPS.html)  
 [https://google.github.io/security-research/pocs/linux/cve-2021-22555/writeup.html](https://google.github.io/security-research/pocs/linux/cve-2021-22555/writeup.html)  
+[slab-cross-cache: kmalloc-256 - kmalloc-cg-256](https://kaligulaarmblessed.github.io/post/cross-cache-for-lazy-people/)
 
