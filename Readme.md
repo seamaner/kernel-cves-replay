@@ -48,7 +48,7 @@ Kernel Privilege Escalation CVE Analysis and Related Files - the bzImage kernel 
 - CVE-2023-32233 netfiler UAF
 - CVE-2023-31436 net/sched OOB similar to 2023-3611
 - CVE-2023-0461 net/tls    UAF
-- CVE-2024-50264 - CVE-2025-21756 https://hoefler.dev/articles/vsock.html (kasl bypass)
+- CVE-2024-50264 
 - CVE-2024-26809 - nftable double free
 ```
 	m = rcu_dereference_protected(priv->match, true);
@@ -62,7 +62,9 @@ Kernel Privilege Escalation CVE Analysis and Related Files - the bzImage kernel 
 		if (priv->dirty)
 			nft_set_pipapo_match_destroy(ctx, set, m);
 ```
-  
+- CVE-2025-21756 https://hoefler.dev/articles/vsock.html (kasl bypass)
+    
+## 参考资料         
 [msg_msg](https://n132.github.io/2024/02/09/IPS.html)  
 [https://google.github.io/security-research/pocs/linux/cve-2021-22555/writeup.html](https://google.github.io/security-research/pocs/linux/cve-2021-22555/writeup.html)  
 
