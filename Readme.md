@@ -2,6 +2,19 @@ Kernel Privilege Escalation CVE Analysis and Related Files - the bzImage kernel 
 
 **Done**   
   
+- CVE-2026-98041 bpf verifier(JMP32 ptr-vs-0)  v5.8-rc1 - v7.3-rc1  constant-per-boot  
+  is_branch_taken 指针 vs 0 捷径不查 is_jmp32 -> verifier believes `if w6 != 0` 永真，low32(value+c)==0（c 按泄漏地址事后算出，map value 只需横跨 4 GiB 边界）时 CPU 走 fall-through 带着未验证入口状态 -> 任意读写 -> core_pattern -> uid 0 (container: CAP_BPF|CAP_PERFMON)；每 boot 跑一次 /exploit 必中（~8 s，无概率扫描）  
+  见 CVE-2026-98041/（exploit + docs + 易感/修复 bzImage + vm-*.log）  
+  
+- CVE-2026-31413 bpf verifier(maybe_fork_scalars OR-fork)  v7.0-rc1 - v7.0-rc4  believed-constant  
+  推入分支跳过 OR 自身 -> verifier believes r8==0, runtime 0|K=K -> 任意读写 -> core_pattern -> uid 0  
+  （容器模式 VM：登录即 uid 1000 + CAP_BPF|CAP_PERFMON，/exploit 逃逸到 host root；无 setuid）  
+  见 CVE-2026-31413/（exploit + docs + 易感/修复 bzImage + vm-*.log）  
+  
+- CVE-2026-72111 bpf verifier(LSM retval)  v7.1-rc3  believed-constant  
+  stale bounds ∩ hook range -> verifier believes r==-4095, runtime 0 -> 任意读写 -> core_pattern -> uid 0 (container: CAP_BPF|CAP_PERFMON)  
+  见 CVE-2026-72111/（exploit + docs + 易感/修复 bzImage + vm-*.log）
+  
 - CVE-2024-41009  bpf ringbuf         5.8 - 6.9     
   buf-overlapping -> buf metadata -> ringbuf meta -> function pointer -> stack pivot -> ROP  
   
